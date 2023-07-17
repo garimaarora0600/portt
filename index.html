@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garima Arora- Programmer, Web Developer, MCA student</title>
+    <link rel="stylesheet" href="./portfolio.css">
+    <script src="https://kit.fontawesome.com/0bccdda3a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <img src="" alt="">
+        <div class="container">
+            <nav>
+                <img src="./InShot_20230429_121725096.jpg" class="logo">
+                <ul id="sidemenu" class="ul">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- we'll be adding 2 functions to hide or show menu bar when clicked -->
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i> <!--close icon-->
+                </ul>
+                <!-- menu bar -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+            <p>WEB DEVELOPER</p>
+            <h1>Hi, I am <span>Garima</span><br>Arora From DCSA<br>PU</h1> 
+        </div>
+    </div>
+</div>
+<!-- about section -->
+<div id="about">
+    <div class="container">
+        <!-- we'll create two columns, one create a row, create two columns within the row -->
+        <div class="row">
+            <!-- in left col, we'll add image -->
+            <div class="about-col-1">
+                <img src="./IMG_20221223_111038.jpg" >
+            </div>  
+              <!-- in right col, we'll add some text  -->
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+               <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo, ea doloribus itaque ipsa obcaecati quas doloremque dolores 
+                architecto quidem iusto eligendi vitae, maxime nemo iste delectus, quod tenetur possimus.</p>
+                <div class="tab-titles">
+                    <!-- 3 titles will be there -->
+                    <!--to make the effect that only the content will be visible when we click on the skills part, we'll go to html and add onclick 
+                     function where we have write SKILLS !-->
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <!-- to display tab contents -->
+                <!-- since we have so many lists, altho under different section ie experience, education etc, all will be displayed at once like a
+                list on the screen, so what we want to do is, unless and until we click on skills or education or exerience, the content won't be 
+            dislayed, so there's a property called display: none in our tab-contents class in css means it will hide all the tab contents -->
+                <!-- now to display only skills part, we'll add one more class active-tab beside tab-contents -->
+                <div class="tab-contents active-tab" id="skills">  <!--we added id because of the function onclick=opentab("skills") and id should be same as that of paramter-->
+                    <ul>
+                        <!-- add one title in a span tag -->
+                        <li><span>Web Developer</span><br> Designing Web Interfaces</li>
+                        <li><span>SQL</span><br>Good Sql Development Skills</li>
+                        <li><span>GIT</span><br>Basic Knowledge of Git</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <!-- add one title in a span tag -->
+                        <li><span>Fresher</span><br>-----</li>
+                        <!-- <li><span>SQL</span><br>Good Sql Development Skills</li>
+                        <li><span>GIT</span><br>Basic Knowledge of Git</li> -->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <!-- add one title in a span tag -->
+                        <li><span>2023- Current</span><br> MCA from DCSA,Panjab University</li>
+                        <li><span>2017-2020</span><br>Bsc(H) Computer Science from Dyal Singh College, DU</li>
+                        <li><span>2015-2017</span><br>High School Education(12th)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------------Projects----------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <!-- add list of projects in 3 columns -->
+        <div class="projects-list">
+        <div class="work work1">
+            <!-- <div class="work1"> -->
+            <img src="./apiproject.jpg" alt="" srcset="">
+            <!-- </div> -->
+            <div class="layer layer1">
+                <h3>Random Quote Generator</h3>
+                <p>This website geneartes quotes randomly.You can see from here.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="work work2">
+            <!-- <div class="work2"> -->
+            <img src="./ff.jfif" alt="" srcset="">
+            <!-- </div> -->
+        <div class="layer layer2">
+            <h3>Food Recipe API website</h3>
+            <p>Food Recipe website using API. You can see it from here</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+        </div>
+        <div class="work work3">
+            <!-- <div class="work3"> -->
+                <img src="./sql.jpg" alt="">
+            <!-- </div> -->
+            <div class="layer layer2">
+                <h3>SQL Project</h3>
+                <p>This project is based on SQL.You can see from here.</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>      
+</div>
+    <a href="#" class="btn">See More</a>
+</div>
+</div>
+
+
+
+
+
+<!-- contact information -->
+<div id="contact">
+    <div class="container">
+        <!-- create 2 columns -->
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>garimaarora9822@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+91-9729548048</p>
+                <div class="social-icons">
+                    <a href="https://github.com/garimaarora0600"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/garima-arora-7b88a020b"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/Garimaarora480"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            <!-- to download the resume -->
+            <a href="./Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="copyright">
+        <p>Copyright @ Garima.</p>
+    </div>
+</div>
+
+
+<!-- using javascript for the function onclick which we have written above for skills,experience and education- the function is for until and unless
+we click on skills, education or experience, the content remains hidden and it'll be visible only when we click on it -->
+<!-- <script src="./portfolio.js"></script> -->
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            // means it'll removing the contents which are displayed on the screen when we click say on skills part, it'll remove the content which
+            // is being displayed on the screen
+            tablink.classList.remove("active-link"); 
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        // now to display the content when we click on it, we'll do the following.
+        event.currentTarget.classList.add("active-link"); //what it'll do is if we click on experience,it'll show the underline below it, like the
+        // kind of hover effect and side by side removing the content on the page due to previous code we had done
+        // now to display the content, we'll add the tabname, so if we click on education, it'll send the education in above parameter tabname in
+        // function opentab and itll search document.getElementById education and add active-tab
+        document.getElementById(tabname).classList.add("active-tab");
+        // for(tablink of tablinks){
+        //     tablink.classList.remove("active-link");
+        // }
+    }
+</script>
+
+<!-- js for opening and closing the menu -->
+<script>
+    var sidemenuu=document.getElementById("sidemenu");
+    function openmenu(){
+        // whenever right will be 0, the menu will be visible
+        sidemenuu.style.right="0"; 
+    }
+
+    function closemenu(){
+        sidemenuu.style.right="-200px"; //as width is 200px so when right=200px, it'll shift towards right to 200px and becomes hidden 
+    }
+</script>
+</body>
+</html>
